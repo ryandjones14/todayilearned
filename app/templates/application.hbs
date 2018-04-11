@@ -1,5 +1,12 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{!-- nav bar --}}
+
+{{!-- new til component --}}
+{{input value=value placeholder=placeholder}}
+
+<button {{action 'createNewTil' value}}>create</button>
+{{!-- til feed --}}
+{{#each tils as |til|}}
+    <p>{{til.content}}</p>
+{{/each}}
 
 {{outlet}}
